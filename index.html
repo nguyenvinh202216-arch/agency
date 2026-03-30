@@ -444,7 +444,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative;
     overflow: hidden;
@@ -546,6 +545,506 @@
   }
 
   .pkg-card.featured .pkg-item::before { color: rgba(255,255,255,0.8); }
+
+  /* Pkg detail button */
+  .pkg-detail-btn {
+    margin-top: auto;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--accent2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: var(--display);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .pkg-detail-btn:hover { background: var(--accent2); color: #fff; border-color: var(--accent2); }
+  .pkg-card.featured .pkg-detail-btn { border-color: rgba(255,255,255,0.4); color: #fff; }
+  .pkg-card.featured .pkg-detail-btn:hover { background: rgba(255,255,255,0.2); }
+
+  /* ===== SERVICE DETAIL PAGE ===== */
+  .service-detail-header {
+    padding: 80px 40px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--display);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    cursor: pointer;
+    margin-bottom: 32px;
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    transition: all 0.2s;
+  }
+  .back-btn:hover { color: var(--accent2); border-color: var(--accent2); }
+
+  .detail-pkg-num {
+    font-family: var(--display);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .detail-pkg-title {
+    font-family: var(--display);
+    font-size: clamp(48px, 7vw, 96px);
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -3px;
+    margin-bottom: 24px;
+  }
+
+  .detail-pkg-price-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .detail-price-main {
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent);
+  }
+
+  .detail-price-note {
+    font-size: 13px;
+    color: var(--text2);
+    background: var(--accent-light);
+    border: 1px solid var(--border2);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+
+  .detail-desc {
+    font-size: 16px;
+    color: var(--text2);
+    max-width: 640px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  /* Detail sections */
+  .detail-body {
+    padding: 0 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .detail-section-title {
+    font-family: var(--display);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent2);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .detail-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .deliverable-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .deliverable-card {
+    background: var(--surface);
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+  }
+
+  .deliverable-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+  .deliverable-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .deliverable-card h4 {
+    font-family: var(--display);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .deliverable-card p {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+
+  .deliverable-card .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .mini-tag {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-family: var(--display);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .mini-tag.accent { border-color: var(--border2); color: var(--accent); background: var(--accent-light); }
+  .mini-tag.accent2 { border-color: rgba(37,99,235,0.2); color: var(--accent2); background: var(--accent2-light); }
+
+  .kpi-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .kpi-highlight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+
+  .kpi-highlight-num {
+    font-family: var(--display);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .kpi-highlight-num .suffix { color: var(--accent); font-size: 20px; }
+
+  .kpi-highlight-label {
+    font-family: var(--display);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .suitable-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .suitable-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .suitable-card .icon { font-size: 28px; margin-bottom: 12px; }
+  .suitable-card h4 {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .suitable-card p { font-size: 13px; color: var(--text2); line-height: 1.65; }
+
+  .process-detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .process-detail-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    transition: background 0.15s;
+  }
+
+  .process-detail-item:last-child { border-bottom: none; }
+  .process-detail-item:hover { background: var(--surface2); }
+
+  .pdi-step {
+    padding: 24px;
+    background: linear-gradient(135deg, var(--accent2) 0%, #1d4ed8 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pdi-step-num {
+    font-family: var(--display);
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .pdi-step-label {
+    font-family: var(--display);
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  .pdi-content {
+    padding: 22px 28px;
+  }
+
+  .pdi-content h4 {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+
+  .pdi-content p { font-size: 13px; color: var(--text2); line-height: 1.65; }
+
+  .pricing-breakdown {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .pricing-breakdown-header {
+    background: linear-gradient(135deg, var(--text) 0%, #2d3a55 100%);
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pricing-breakdown-header h3 {
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .pricing-breakdown-header .price-big {
+    font-family: var(--display);
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pricing-row:last-child { border-bottom: none; }
+
+  .pricing-row-label {
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .pricing-row-value {
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent2);
+  }
+
+  .pricing-row.total {
+    background: var(--accent2-light);
+  }
+
+  .pricing-row.total .pricing-row-label { font-size: 16px; font-weight: 800; }
+  .pricing-row.total .pricing-row-value { font-size: 18px; color: var(--accent); }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .faq-q {
+    padding: 20px 24px;
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.15s;
+  }
+  .faq-q:hover { background: var(--surface2); }
+  .faq-q::after { content: '+'; font-size: 20px; color: var(--accent2); transition: transform 0.2s; }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+  .faq-a {
+    display: none;
+    padding: 0 24px 20px;
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.75;
+    border-top: 1px solid var(--border);
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* Addon services section */
+  .addon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .addon-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+  }
+  .addon-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+  .addon-code {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--accent2);
+    min-width: 48px;
+    text-align: center;
+    background: var(--accent2-light);
+    border-radius: 8px;
+    padding: 8px;
+  }
+
+  .addon-info h4 {
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .addon-info p {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .addon-price {
+    font-family: var(--display);
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  /* CTA Block */
+  .cta-block {
+    background: linear-gradient(135deg, var(--accent2) 0%, #1e40af 60%, var(--accent-dark) 100%);
+    border-radius: 16px;
+    padding: 56px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 40px 80px;
+  }
+
+  .cta-block h2 {
+    font-family: var(--display);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .cta-block h2 span { color: #fbbf24; }
+
+  .cta-block p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.82);
+    max-width: 500px;
+    margin: 0 auto 36px;
+    line-height: 1.75;
+  }
+
+  .cta-block .btn-primary { background: var(--accent); }
+  .cta-block .btn-outline { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: #fff; }
+  .cta-block .btn-outline:hover { background: rgba(255,255,255,0.2); }
+
 
   /* ===== BRIEF PAGE ===== */
   .brief-header {
@@ -1277,14 +1776,16 @@
   @media (max-width: 900px) {
     nav { padding: 0 20px; }
     .nav-links li a { padding: 6px 10px; font-size: 10px; }
-    .hero, section, .services-intro, .brief-body, .prop-section { padding-left: 20px; padding-right: 20px; }
+    .hero, section, .services-intro, .brief-body, .prop-section, .detail-body { padding-left: 20px; padding-right: 20px; }
     h1.hero-title { font-size: 44px; }
-    .about-grid, .values-grid, .pkg-grid, .channel-grid, .po-grid, .swot-grid { grid-template-columns: 1fr; }
+    .about-grid, .values-grid, .pkg-grid, .channel-grid, .po-grid, .swot-grid, .deliverable-grid, .suitable-grid, .addon-grid { grid-template-columns: 1fr; }
     .process-item { grid-template-columns: 60px 1fr; }
     .process-tag { display: none; }
-    .data-grid, .kpi-grid, .audience-grid { grid-template-columns: 1fr 1fr; }
+    .data-grid, .kpi-grid, .audience-grid, .kpi-highlight-grid { grid-template-columns: 1fr 1fr; }
     .hero-metrics { gap: 12px; flex-wrap: wrap; }
     .pkg-grid { margin: 0 20px; }
+    .cta-block { margin: 0 20px 60px; padding: 36px 24px; }
+    .service-detail-header { padding: 60px 20px 40px; }
   }
 </style>
 </head>
@@ -1340,7 +1841,7 @@
     <div class="about-grid">
       <div class="about-block accent">
         <h3>Tầm nhìn</h3>
-        <p>Trở thành Performance Agency số 1 tại Việt Nam trong lĩnh vực tối ưu chuyển đổi và đo lường dữ liệu quảng cáo cho các doanh nghiệp vừa & nhỏ — nơi mọi chiến dịch đều có thể đo lường, kiểm soát và tối ưu theo thời gian thực.</p>
+        <p>Trở thành Performance Agency số 1 tại Việt Nam trong lĩnh vực tối ưu chuyển đổi và đo lường dữ liệu quảng cáo cho các doanh nghiệp vừa &amp; nhỏ — nơi mọi chiến dịch đều có thể đo lường, kiểm soát và tối ưu theo thời gian thực.</p>
       </div>
       <div class="about-block accent2">
         <h3>Sứ mệnh</h3>
@@ -1348,7 +1849,7 @@
       </div>
       <div class="about-block">
         <h3>Định vị</h3>
-        <p>Chuyên sâu vào Performance Marketing: Facebook Ads, Landing Page CRO, Tracking & Analytics. Không làm tràn lan — làm sâu, làm đúng, làm có kết quả.</p>
+        <p>Chuyên sâu vào Performance Marketing: Facebook Ads, Landing Page CRO, Tracking &amp; Analytics. Không làm tràn lan — làm sâu, làm đúng, làm có kết quả.</p>
       </div>
       <div class="about-block">
         <h3>Cam kết</h3>
@@ -1368,7 +1869,7 @@
       </div>
       <div class="value-card" data-num="02">
         <div class="value-icon">⚡</div>
-        <h3>Tốc độ & Linh hoạt</h3>
+        <h3>Tốc độ &amp; Linh hoạt</h3>
         <p>Triển khai nhanh, tối ưu liên tục. Thị trường thay đổi — chiến dịch của bạn cũng vậy.</p>
       </div>
       <div class="value-card" data-num="03">
@@ -1377,7 +1878,7 @@
         <p>Reach và impression chỉ là phương tiện. Điểm cuối luôn là Lead, Order và doanh thu.</p>
       </div>
       <div class="value-card" data-num="04">
-        <div class="value-icon">🔁</div>
+        <div class="value-icon">🔍</div>
         <h3>Minh bạch tuyệt đối</h3>
         <p>Dashboard báo cáo thời gian thực. Bạn luôn thấy toàn bộ số liệu, không bao giờ bị giấu thông tin.</p>
       </div>
@@ -1391,7 +1892,7 @@
       <div class="process-item">
         <div class="process-num">01 —</div>
         <div class="process-content">
-          <h3>Facebook & TikTok Ads</h3>
+          <h3>Facebook &amp; TikTok Ads</h3>
           <p>Thiết lập, triển khai và tối ưu chiến dịch quảng cáo trả phí. Setup pixel, custom audience, lookalike, A/B testing liên tục.</p>
         </div>
         <div class="process-tag">Performance</div>
@@ -1399,7 +1900,7 @@
       <div class="process-item">
         <div class="process-num">02 —</div>
         <div class="process-content">
-          <h3>Landing Page & Website</h3>
+          <h3>Landing Page &amp; Website</h3>
           <p>Thiết kế và phát triển trang đích tối ưu chuyển đổi — tốc độ tải nhanh, CTA rõ ràng, A/B test headline và layout.</p>
         </div>
         <div class="process-tag">CRO</div>
@@ -1407,7 +1908,7 @@
       <div class="process-item">
         <div class="process-num">03 —</div>
         <div class="process-content">
-          <h3>Tracking & Analytics Setup</h3>
+          <h3>Tracking &amp; Analytics Setup</h3>
           <p>Cài đặt Google Analytics 4, Facebook Pixel, Conversion API, Google Tag Manager. Dashboard báo cáo tập trung theo thời gian thực.</p>
         </div>
         <div class="process-tag">Data</div>
@@ -1438,7 +1939,7 @@
       <div class="process-item">
         <div class="process-num">B1</div>
         <div class="process-content">
-          <h3>Tiếp nhận & phân tích Brief</h3>
+          <h3>Tiếp nhận &amp; phân tích Brief</h3>
           <p>Thu thập thông tin doanh nghiệp, sản phẩm, ngân sách, mục tiêu KPI. Trao đổi trực tiếp để làm rõ kỳ vọng.</p>
         </div>
         <div class="process-tag">Day 1–2</div>
@@ -1446,7 +1947,7 @@
       <div class="process-item">
         <div class="process-num">B2</div>
         <div class="process-content">
-          <h3>Nghiên cứu thị trường & đối thủ</h3>
+          <h3>Nghiên cứu thị trường &amp; đối thủ</h3>
           <p>Phân tích insight khách hàng mục tiêu, audit đối thủ cạnh tranh, xác định cơ hội và điểm khác biệt.</p>
         </div>
         <div class="process-tag">Day 3–5</div>
@@ -1454,7 +1955,7 @@
       <div class="process-item">
         <div class="process-num">B3</div>
         <div class="process-content">
-          <h3>Xây dựng Proposal & chiến lược</h3>
+          <h3>Xây dựng Proposal &amp; chiến lược</h3>
           <p>Đề xuất chiến lược kênh, ngân sách phân bổ, KPI dự kiến, timeline và deliverables chi tiết.</p>
         </div>
         <div class="process-tag">Day 6–7</div>
@@ -1462,7 +1963,7 @@
       <div class="process-item">
         <div class="process-num">B4</div>
         <div class="process-content">
-          <h3>Setup hệ thống & tracking</h3>
+          <h3>Setup hệ thống &amp; tracking</h3>
           <p>Cài đặt pixel, GA4, Conversion API, tạo tài khoản quảng cáo, xây dựng landing page, thiết lập dashboard báo cáo.</p>
         </div>
         <div class="process-tag">Week 2</div>
@@ -1470,7 +1971,7 @@
       <div class="process-item">
         <div class="process-num">B5</div>
         <div class="process-content">
-          <h3>Triển khai & tối ưu liên tục</h3>
+          <h3>Triển khai &amp; tối ưu liên tục</h3>
           <p>Chạy chiến dịch, theo dõi số liệu hàng ngày, tối ưu creative, audience, bid strategy theo data thực.</p>
         </div>
         <div class="process-tag">Week 3–6</div>
@@ -1478,7 +1979,7 @@
       <div class="process-item">
         <div class="process-num">B6</div>
         <div class="process-content">
-          <h3>Báo cáo & đề xuất scale</h3>
+          <h3>Báo cáo &amp; đề xuất scale</h3>
           <p>Tổng kết KPI, phân tích insight, đề xuất hướng mở rộng ngân sách hoặc điều chỉnh chiến lược giai đoạn tiếp theo.</p>
         </div>
         <div class="process-tag">Monthly</div>
@@ -1488,7 +1989,7 @@
 
   <footer>
     <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
-    <div class="footer-copy">Performance Marketing · Data-Driven · Hà Nội & TP.HCM</div>
+    <div class="footer-copy">Performance Marketing · Data-Driven · Hà Nội &amp; TP.HCM</div>
   </footer>
 </div>
 
@@ -1498,15 +1999,15 @@
   <div class="services-intro">
     <div class="section-label">// Gói dịch vụ</div>
     <h2 class="section-title">Chọn gói phù hợp<br>với giai đoạn của bạn.</h2>
-    <p style="color:var(--text2); max-width:600px; font-size:15px; line-height:1.7;">Mỗi gói được thiết kế cho một giai đoạn phát triển cụ thể — từ doanh nghiệp mới bắt đầu chạy quảng cáo đến doanh nghiệp cần tối ưu hệ thống toàn diện và scale ngân sách.</p>
+    <p style="color:var(--text2); max-width:660px; font-size:15px; line-height:1.75;">Mỗi gói được thiết kế cho một giai đoạn phát triển cụ thể — từ doanh nghiệp mới bắt đầu chạy quảng cáo đến doanh nghiệp cần tối ưu hệ thống toàn diện và scale ngân sách. Không thu % doanh số ở gói cơ bản — phí cố định rõ ràng, minh bạch.</p>
   </div>
 
   <div class="pkg-grid">
     <div class="pkg-card">
       <div class="pkg-num">Gói 01</div>
       <div class="pkg-name">LAUNCH<br>FAST</div>
-      <div class="pkg-price">Từ 5.000.000 VNĐ / tháng</div>
-      <div class="pkg-desc">Dành cho doanh nghiệp mới, cần bắt đầu chạy quảng cáo nhanh với ngân sách tối thiểu.</div>
+      <div class="pkg-price">Phí cố định từ 5.000.000 VNĐ / tháng</div>
+      <div class="pkg-desc">Dành cho doanh nghiệp mới, cần bắt đầu chạy quảng cáo nhanh với ngân sách tối thiểu. Không thu % doanh số.</div>
       <ul class="pkg-items">
         <li class="pkg-item">Setup tài khoản Facebook Ads</li>
         <li class="pkg-item">Cài đặt Facebook Pixel cơ bản</li>
@@ -1514,53 +2015,57 @@
         <li class="pkg-item">Báo cáo hàng tuần (Google Sheet)</li>
         <li class="pkg-item">Tư vấn creative brief cho content</li>
       </ul>
+      <button class="pkg-detail-btn" onclick="showServiceDetail('launch-fast')">Xem chi tiết gói →</button>
     </div>
 
     <div class="pkg-card featured">
       <div class="pkg-badge">Phổ biến nhất</div>
       <div class="pkg-num">Gói 02</div>
       <div class="pkg-name">PERFORMANCE<br>CORE</div>
-      <div class="pkg-price">Từ 12.000.000 VNĐ / tháng</div>
-      <div class="pkg-desc">Gói toàn diện cho doanh nghiệp muốn tối ưu Lead chất lượng và hạ giá CPL.</div>
+      <div class="pkg-price">Từ 12.000.000 VNĐ / tháng + 08–10% Ngân Sách</div>
+      <div class="pkg-desc">Gói toàn diện cho doanh nghiệp muốn tối ưu Lead chất lượng và hạ giá CPL. Agency cam kết chất lượng đầu ra, gắn liền chi phí với hiệu quả tăng trưởng.</div>
       <ul class="pkg-items">
         <li class="pkg-item">Facebook + TikTok Ads</li>
         <li class="pkg-item">Landing Page tối ưu CRO</li>
         <li class="pkg-item">Pixel + Conversion API + GA4</li>
-        <li class="pkg-item">A/B testing creative & audience</li>
+        <li class="pkg-item">A/B testing creative &amp; audience</li>
         <li class="pkg-item">Dashboard báo cáo thời gian thực</li>
         <li class="pkg-item">Họp review hàng tuần</li>
       </ul>
+      <button class="pkg-detail-btn" onclick="showServiceDetail('performance-core')">Xem chi tiết gói →</button>
     </div>
 
     <div class="pkg-card">
       <div class="pkg-num">Gói 03</div>
-      <div class="pkg-name">SCALE &<br>OPTIMIZE</div>
-      <div class="pkg-price">Từ 25.000.000 VNĐ / tháng</div>
-      <div class="pkg-desc">Dành cho doanh nghiệp muốn scale ngân sách lớn, xây hệ thống dữ liệu bài bản và tối ưu toàn funnel.</div>
+      <div class="pkg-name">SCALE &amp;<br>OPTIMIZE</div>
+      <div class="pkg-price">Từ 25.000.000 VNĐ / tháng + 05–07% Ngân Sách</div>
+      <div class="pkg-desc">Dành cho doanh nghiệp muốn scale ngân sách lớn, xây hệ thống dữ liệu bài bản và tối ưu toàn funnel. Hợp tác chiến lược sâu rộng để tối đa hóa lợi nhuận.</div>
       <ul class="pkg-items">
         <li class="pkg-item">Multi-channel: FB + TikTok + Google</li>
         <li class="pkg-item">Full tracking stack (GA4 + GTM + CAPI)</li>
         <li class="pkg-item">CRO audit + tối ưu funnel toàn diện</li>
-        <li class="pkg-item">KOL/KOC brief & báo cáo hiệu quả</li>
+        <li class="pkg-item">KOL/KOC brief &amp; báo cáo hiệu quả</li>
         <li class="pkg-item">Custom dashboard Looker Studio</li>
         <li class="pkg-item">Dedicated Account Manager</li>
       </ul>
+      <button class="pkg-detail-btn" onclick="showServiceDetail('scale-optimize')">Xem chi tiết gói →</button>
     </div>
   </div>
 
   <section>
     <div class="section-label">// Dịch vụ đơn lẻ</div>
-    <h2 class="section-title">Hoặc chỉ cần một dịch vụ cụ thể?</h2>
+    <h2 class="section-title">Hoặc chỉ cần<br>một dịch vụ cụ thể?</h2>
+    <p style="color:var(--text2);font-size:15px;line-height:1.7;max-width:580px;margin-bottom:36px;">Không cần mua trọn gói. Bạn có thể chọn đúng dịch vụ mình cần, triển khai nhanh và mở rộng sau khi thấy kết quả.</p>
     <div class="process-list">
-      <div class="process-item">
+      <div class="process-item" style="cursor:pointer;" onclick="showServiceDetail('landing-page')">
         <div class="process-num">LP</div>
         <div class="process-content">
-          <h3>Landing Page thiết kế & tối ưu</h3>
+          <h3>Landing Page thiết kế &amp; tối ưu</h3>
           <p>Thiết kế landing page chuyên dụng cho chiến dịch, tối ưu tốc độ, CTA, form thu Lead. Cam kết CR tối thiểu 3%.</p>
         </div>
         <div class="process-tag">Từ 3.000.000</div>
       </div>
-      <div class="process-item">
+      <div class="process-item" style="cursor:pointer;" onclick="showServiceDetail('tracking-setup')">
         <div class="process-num">TK</div>
         <div class="process-content">
           <h3>Setup hệ thống Tracking</h3>
@@ -1568,7 +2073,7 @@
         </div>
         <div class="process-tag">Từ 2.000.000</div>
       </div>
-      <div class="process-item">
+      <div class="process-item" style="cursor:pointer;" onclick="showServiceDetail('dashboard')">
         <div class="process-num">DB</div>
         <div class="process-content">
           <h3>Dashboard báo cáo Looker Studio</h3>
@@ -1576,7 +2081,7 @@
         </div>
         <div class="process-tag">Từ 3.500.000</div>
       </div>
-      <div class="process-item">
+      <div class="process-item" style="cursor:pointer;" onclick="showServiceDetail('audit')">
         <div class="process-num">AU</div>
         <div class="process-content">
           <h3>Audit tài khoản quảng cáo</h3>
@@ -1589,7 +2094,886 @@
 
   <footer>
     <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
-    <div class="footer-copy">Performance Marketing · Data-Driven · Hà Nội & TP.HCM</div>
+    <div class="footer-copy">Performance Marketing · Data-Driven · Hà Nội &amp; TP.HCM</div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: SERVICE DETAIL - LAUNCH FAST ==================== -->
+<div id="page-launch-fast" class="page">
+  <div class="service-detail-header" style="background:linear-gradient(135deg,#f4f6fb 0%,#e8f0fe 60%,#fef3e8 100%);">
+    <div class="back-btn" onclick="showPage('services')">← Quay lại Dịch vụ</div>
+    <div class="detail-pkg-num">Gói 01 · Phù hợp cho doanh nghiệp mới</div>
+    <div class="detail-pkg-title" style="color:var(--text);">LAUNCH<br><span style="color:var(--accent);">FAST</span></div>
+    <div class="detail-pkg-price-row">
+      <div class="detail-price-main">5.000.000 VNĐ / tháng</div>
+      <div class="detail-price-note">Phí cố định · Không thu % doanh số</div>
+    </div>
+    <p class="detail-desc">Dành cho doanh nghiệp mới bắt đầu hành trình quảng cáo số. Chúng tôi giúp bạn thiết lập nền tảng đúng cách từ đầu — không phải tốn tiền sửa sau. Bắt đầu nhanh, đúng hướng, có số liệu ngay từ tuần đầu tiên.</p>
+  </div>
+
+  <div class="detail-body">
+    <!-- Deliverables -->
+    <div>
+      <div class="detail-section-title">Bao gồm trong gói</div>
+      <div class="deliverable-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📘</div>
+          <h4>Setup tài khoản Facebook Ads</h4>
+          <p>Tạo và cấu hình Business Manager, Ad Account, Page đúng chuẩn. Thiết lập billing, phân quyền và cấu trúc campaign sẵn sàng chạy.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent2">Business Manager</span>
+            <span class="mini-tag">Ad Account</span>
+            <span class="mini-tag">Billing Setup</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔷</div>
+          <h4>Cài đặt Facebook Pixel cơ bản</h4>
+          <p>Gắn Pixel lên website, cấu hình các sự kiện cơ bản: PageView, ViewContent, Lead. Kiểm tra và xác nhận dữ liệu đang thu về đúng.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent">Facebook Pixel</span>
+            <span class="mini-tag">Event Tracking</span>
+            <span class="mini-tag">Verification</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🚀</div>
+          <h4>2 chiến dịch / tháng</h4>
+          <p>Xây dựng và chạy 2 chiến dịch hoàn chỉnh mỗi tháng — bao gồm lên cấu trúc ad set, target audience, viết ad copy và setup budget.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent">2 Campaigns</span>
+            <span class="mini-tag">Audience Setup</span>
+            <span class="mini-tag">Ad Copy</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📊</div>
+          <h4>Báo cáo hàng tuần (Google Sheet)</h4>
+          <p>Mỗi tuần nhận báo cáo gồm: chi tiêu, impression, click, CPL, số lượng Lead. Dễ đọc, không cần kiến thức chuyên sâu.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent2">Weekly Report</span>
+            <span class="mini-tag">Google Sheet</span>
+            <span class="mini-tag">CPL Tracking</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">✏️</div>
+          <h4>Tư vấn creative brief cho content</h4>
+          <p>Cung cấp brief chi tiết cho team nội dung: góc độ tiếp cận, hook câu mở đầu, CTA đề xuất, format phù hợp với từng giai đoạn funnel.</p>
+          <div class="tag-list">
+            <span class="mini-tag">Creative Brief</span>
+            <span class="mini-tag">Hook Copy</span>
+            <span class="mini-tag accent">CTA Guide</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">💬</div>
+          <h4>Hỗ trợ tư vấn thường xuyên</h4>
+          <p>Kênh liên lạc trực tiếp qua Zalo/Messenger. Phản hồi các câu hỏi và tư vấn điều chỉnh trong giờ hành chính.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent2">Zalo Support</span>
+            <span class="mini-tag">Consultation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suitable for -->
+    <div>
+      <div class="detail-section-title">Gói này phù hợp với ai?</div>
+      <div class="suitable-grid">
+        <div class="suitable-card">
+          <div class="icon">🏪</div>
+          <h4>Doanh nghiệp mới mở</h4>
+          <p>Vừa có sản phẩm, cần thử nghiệm thị trường và bắt đầu thu Lead đầu tiên với ngân sách tối thiểu.</p>
+        </div>
+        <div class="suitable-card">
+          <div class="icon">💡</div>
+          <h4>Chưa có kinh nghiệm quảng cáo</h4>
+          <p>Chưa bao giờ chạy Facebook Ads hoặc đã tự chạy nhưng không có kết quả. Cần người hướng dẫn đúng cách.</p>
+        </div>
+        <div class="suitable-card">
+          <div class="icon">📦</div>
+          <h4>Ngân sách quảng cáo 10–30 triệu/tháng</h4>
+          <p>Muốn kiểm soát chi phí, thử nghiệm phản hồi của thị trường trước khi đầu tư mạnh hơn.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <div>
+      <div class="detail-section-title">Quy trình triển khai</div>
+      <div class="process-detail-list">
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">D1–2</div><div class="pdi-step-label">Ngày</div></div>
+          <div class="pdi-content"><h4>Onboarding &amp; brief</h4><p>Trao đổi thông tin doanh nghiệp, sản phẩm, đối tượng khách hàng. Xác nhận mục tiêu và KPI kỳ vọng.</p></div>
+        </div>
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">D3–5</div><div class="pdi-step-label">Ngày</div></div>
+          <div class="pdi-content"><h4>Setup tài khoản &amp; Pixel</h4><p>Thiết lập Business Manager, Ad Account, cài Pixel và xác nhận tracking đang hoạt động đúng.</p></div>
+        </div>
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">D6–7</div><div class="pdi-step-label">Ngày</div></div>
+          <div class="pdi-content"><h4>Xây dựng &amp; phê duyệt creative</h4><p>Gửi creative brief, xây dựng ad copy, trình duyệt với khách hàng trước khi chạy.</p></div>
+        </div>
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">W2+</div><div class="pdi-step-label">Tuần</div></div>
+          <div class="pdi-content"><h4>Chạy chiến dịch &amp; theo dõi</h4><p>Khởi chạy chiến dịch, theo dõi hàng ngày và gửi báo cáo tuần. Điều chỉnh bid và budget khi cần.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div>
+      <div class="detail-section-title">Chi phí rõ ràng</div>
+      <div class="pricing-breakdown">
+        <div class="pricing-breakdown-header">
+          <h3>Gói LAUNCH FAST</h3>
+          <div class="price-big">5.000.000đ<span style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.7);">/tháng</span></div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Phí quản lý Agency</div>
+          <div class="pricing-row-value">5.000.000 VNĐ / tháng</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">% Ngân sách quảng cáo</div>
+          <div class="pricing-row-value">Không thu</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">% Doanh số / hoa hồng</div>
+          <div class="pricing-row-value">Không thu</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Ngân sách ads gợi ý</div>
+          <div class="pricing-row-value">10–30 triệu VNĐ / tháng</div>
+        </div>
+        <div class="pricing-row total">
+          <div class="pricing-row-label">Cam kết tối thiểu</div>
+          <div class="pricing-row-value">1 tháng</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div>
+      <div class="detail-section-title">Câu hỏi thường gặp</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Tôi không có creative (hình ảnh, video) thì sao?</div>
+          <div class="faq-a">Chúng tôi sẽ cung cấp brief chi tiết để bạn hoặc team của bạn sản xuất content. Nếu bạn cần hỗ trợ sản xuất creative, hãy hỏi chúng tôi về gói dịch vụ bổ sung.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Ngân sách quảng cáo nên là bao nhiêu?</div>
+          <div class="faq-a">Với gói Launch Fast, chúng tôi khuyến nghị ngân sách ads tối thiểu 10 triệu/tháng để có đủ dữ liệu tối ưu. Ngân sách này trả trực tiếp cho Facebook, tách biệt với phí Agency.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Sau 1 tháng tôi có thể nâng gói không?</div>
+          <div class="faq-a">Hoàn toàn được. Nhiều khách hàng bắt đầu với Launch Fast để thử nghiệm, sau đó nâng lên Performance Core khi đã có nền tảng và muốn scale. Quá trình chuyển đổi rất mượt mà vì chúng tôi đã quen thuộc với tài khoản của bạn.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Bắt đầu với<br><span>5 triệu mỗi tháng.</span></h2>
+    <p>Không cần cam kết dài hạn. Không thu % doanh số. Hãy để chúng tôi giúp bạn có Lead đầu tiên từ quảng cáo đúng cách.</p>
+    <div class="cta-strip">
+      <button class="btn-primary" onclick="showPage('services')">Xem tất cả gói dịch vụ</button>
+      <button class="btn-outline" onclick="showPage('proposal')">Xem Proposal mẫu</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
+    <div class="footer-copy">Gói Launch Fast · Performance Marketing · HN &amp; HCM</div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: SERVICE DETAIL - PERFORMANCE CORE ==================== -->
+<div id="page-performance-core" class="page">
+  <div class="service-detail-header" style="background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 100%);">
+    <div class="back-btn" onclick="showPage('services')" style="color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.1);">← Quay lại Dịch vụ</div>
+    <div class="detail-pkg-num" style="color:rgba(255,255,255,0.7);">Gói 02 · Phổ biến nhất · Phù hợp doanh nghiệp đang tăng trưởng</div>
+    <div class="detail-pkg-title" style="color:#fff;">PERFORMANCE<br><span style="color:#fbbf24;">CORE</span></div>
+    <div class="detail-pkg-price-row">
+      <div class="detail-price-main" style="color:#fbbf24;">12.000.000 VNĐ / tháng</div>
+      <div class="detail-price-note" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);">+ 08–10% ngân sách quảng cáo</div>
+      <div class="detail-price-note" style="background:rgba(251,191,36,0.2);border-color:rgba(251,191,36,0.4);color:#fbbf24;">Cam kết KPI</div>
+    </div>
+    <p class="detail-desc" style="color:rgba(255,255,255,0.85);">Gói toàn diện nhất cho doanh nghiệp muốn tối ưu Lead chất lượng và hạ giá CPL. Agency cam kết chất lượng đầu ra — chi phí gắn liền với hiệu quả tăng trưởng của doanh nghiệp. Bạn scale, chúng tôi cùng scale.</p>
+  </div>
+
+  <div class="detail-body">
+    <!-- KPI highlights -->
+    <div>
+      <div class="detail-section-title">Cam kết hiệu quả</div>
+      <div class="kpi-highlight-grid">
+        <div class="kpi-highlight">
+          <div class="kpi-highlight-num">20<span class="suffix">%</span></div>
+          <div class="kpi-highlight-label">Giảm CPL trung bình</div>
+        </div>
+        <div class="kpi-highlight">
+          <div class="kpi-highlight-num">3<span class="suffix">x</span></div>
+          <div class="kpi-highlight-label">ROAS mục tiêu</div>
+        </div>
+        <div class="kpi-highlight">
+          <div class="kpi-highlight-num">7<span class="suffix">ng</span></div>
+          <div class="kpi-highlight-label">Họp review hàng tuần</div>
+        </div>
+        <div class="kpi-highlight">
+          <div class="kpi-highlight-num">2<span class="suffix">kênh</span></div>
+          <div class="kpi-highlight-label">Facebook + TikTok</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deliverables -->
+    <div>
+      <div class="detail-section-title">Bao gồm toàn bộ trong gói</div>
+      <div class="deliverable-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📘🎵</div>
+          <h4>Facebook + TikTok Ads</h4>
+          <p>Quản lý đồng thời cả hai kênh với chiến lược phân biệt: Facebook nhắm nhóm 22–35 tuổi, TikTok mở rộng sang nhóm trẻ hơn. A/B testing creative liên tục.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent">Facebook Ads</span>
+            <span class="mini-tag accent2">TikTok Ads</span>
+            <span class="mini-tag">A/B Testing</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎯</div>
+          <h4>Landing Page tối ưu CRO</h4>
+          <p>Thiết kế và phát triển landing page chuyên dụng cho chiến dịch — tốc độ tải nhanh (&lt;2s), CTA rõ ràng, form thu Lead được tối ưu. Cam kết CR tối thiểu 3%.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent">CR ≥ 3%</span>
+            <span class="mini-tag">Speed Optimized</span>
+            <span class="mini-tag accent2">A/B Headlines</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔷</div>
+          <h4>Pixel + Conversion API + GA4</h4>
+          <p>Setup full tracking stack: Facebook Pixel, Conversion API (server-side), Google Analytics 4. Đảm bảo dữ liệu chính xác kể cả khi có iOS privacy restrictions.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent">CAPI</span>
+            <span class="mini-tag accent2">GA4</span>
+            <span class="mini-tag">iOS Safe</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🧪</div>
+          <h4>A/B testing creative &amp; audience</h4>
+          <p>Test hệ thống: so sánh creative (video vs image, hook A vs hook B), audience (lookalike vs interest vs remarketing). Quyết định dựa trên data sau 7–10 ngày.</p>
+          <div class="tag-list">
+            <span class="mini-tag">Creative Test</span>
+            <span class="mini-tag accent">Audience Test</span>
+            <span class="mini-tag accent2">Data-driven</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📈</div>
+          <h4>Dashboard báo cáo thời gian thực</h4>
+          <p>Dashboard Google Looker Studio cập nhật hàng ngày: CPL, CPA, ROAS, Lead theo kênh, tỷ lệ chuyển đổi theo thiết bị. Truy cập 24/7, không cần chờ báo cáo tuần.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent2">Looker Studio</span>
+            <span class="mini-tag">Real-time</span>
+            <span class="mini-tag accent">Multi-channel</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🤝</div>
+          <h4>Họp review hàng tuần</h4>
+          <p>Call/meet 30–60 phút mỗi tuần: review số liệu tuần, phân tích điểm cần tối ưu, thống nhất hướng đi tuần tiếp theo. Có biên bản ghi chú sau mỗi buổi.</p>
+          <div class="tag-list">
+            <span class="mini-tag">Weekly Meeting</span>
+            <span class="mini-tag accent2">Meeting Notes</span>
+            <span class="mini-tag">Optimization Plan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suitable -->
+    <div>
+      <div class="detail-section-title">Gói này phù hợp với ai?</div>
+      <div class="suitable-grid">
+        <div class="suitable-card">
+          <div class="icon">📈</div>
+          <h4>Đã chạy ads nhưng CPL còn cao</h4>
+          <p>Đang chi 30–100 triệu/tháng cho quảng cáo nhưng chưa tối ưu được CPL. Muốn hạ chi phí Lead xuống và tăng chất lượng.</p>
+        </div>
+        <div class="suitable-card">
+          <div class="icon">🔧</div>
+          <h4>Chưa có landing page chuyên dụng</h4>
+          <p>Đang dùng website thông thường để đón traffic quảng cáo. Tỷ lệ chuyển đổi thấp và không ổn định.</p>
+        </div>
+        <div class="suitable-card">
+          <div class="icon">🎯</div>
+          <h4>Muốn mở rộng sang TikTok</h4>
+          <p>Đang chạy tốt trên Facebook và muốn test thêm TikTok để tiếp cận nhóm trẻ hơn với CPL thấp hơn.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <div>
+      <div class="detail-section-title">Timeline triển khai</div>
+      <div class="process-detail-list">
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">W1</div><div class="pdi-step-label">Tuần 1</div></div>
+          <div class="pdi-content"><h4>Setup &amp; Build · Xây nền tảng</h4><p>Thiết kế Landing Page, cài đặt full tracking stack (Pixel, CAPI, GA4, TikTok Pixel), setup tài khoản quảng cáo, brief creative, xây dựng audience research.</p></div>
+        </div>
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">W2</div><div class="pdi-step-label">Tuần 2</div></div>
+          <div class="pdi-content"><h4>Launch · Khởi chạy &amp; thu dữ liệu</h4><p>Chạy Facebook + TikTok Ads đồng thời. Test 3–4 creative format khác nhau. Thu thập 50–80 Lead đầu tiên để calibrate machine learning.</p></div>
+        </div>
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">W3–4</div><div class="pdi-step-label">Tuần 3–4</div></div>
+          <div class="pdi-content"><h4>Optimize · Tối ưu &amp; scale</h4><p>Tắt creative kém hiệu quả, dồn ngân sách vào nhóm sinh lời. A/B test landing page. Kích hoạt retargeting visitor chưa điền form.</p></div>
+        </div>
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">M+</div><div class="pdi-step-label">Hàng tháng</div></div>
+          <div class="pdi-content"><h4>Report &amp; Scale · Báo cáo &amp; mở rộng</h4><p>Tổng kết KPI tháng, phân tích insight, đề xuất hướng scale ngân sách hoặc điều chỉnh chiến lược tháng tiếp theo.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div>
+      <div class="detail-section-title">Cơ cấu chi phí</div>
+      <div class="pricing-breakdown">
+        <div class="pricing-breakdown-header">
+          <h3>Gói PERFORMANCE CORE</h3>
+          <div class="price-big">12tr<span style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.7);">+ % ngân sách</span></div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Phí quản lý Agency (cố định)</div>
+          <div class="pricing-row-value">12.000.000 VNĐ / tháng</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">% Ngân sách quảng cáo</div>
+          <div class="pricing-row-value">08–10% (thỏa thuận)</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Ngân sách ads tối thiểu gợi ý</div>
+          <div class="pricing-row-value">50–100 triệu VNĐ / tháng</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Landing Page setup</div>
+          <div class="pricing-row-value">Bao gồm trong gói</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Tracking &amp; Dashboard</div>
+          <div class="pricing-row-value">Bao gồm trong gói</div>
+        </div>
+        <div class="pricing-row total">
+          <div class="pricing-row-label">Cam kết tối thiểu</div>
+          <div class="pricing-row-value">3 tháng</div>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--text3);margin-top:12px;font-family:var(--display);">* Tỷ lệ % ngân sách được thỏa thuận dựa trên tỷ lệ chốt và kết quả tối ưu thực tế của từng doanh nghiệp.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div>
+      <div class="detail-section-title">Câu hỏi thường gặp</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Tại sao có % ngân sách thêm vào phí cố định?</div>
+          <div class="faq-a">Mô hình này đảm bảo lợi ích của Agency gắn liền với hiệu quả của bạn. Khi bạn scale ngân sách vì kết quả tốt, chúng tôi cũng được hưởng lợi — điều này tạo động lực thực sự để chúng tôi tối ưu hết mình.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Landing Page được build trên nền tảng nào?</div>
+          <div class="faq-a">Chúng tôi xây dựng trên các nền tảng phù hợp với yêu cầu của từng dự án: WordPress/Elementor, hay thuần HTML/CSS cho tốc độ tối đa. Bạn sẽ được bàn giao quyền sở hữu hoàn toàn.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Nếu tháng đầu chưa đạt KPI thì sao?</div>
+          <div class="faq-a">Tháng đầu là giai đoạn thu thập dữ liệu và calibrate. Chúng tôi sẽ phân tích rõ nguyên nhân và điều chỉnh. Cam kết KPI thường được tính từ tháng thứ 2 trở đi khi đã có đủ data để tối ưu.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Có thể nâng lên Scale &amp; Optimize không?</div>
+          <div class="faq-a">Hoàn toàn có thể. Khi ngân sách của bạn vượt 100–150 triệu/tháng và cần thêm Google Ads, KOL/KOC, và Account Manager riêng, chúng tôi sẽ tư vấn chuyển lên Scale &amp; Optimize.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Gói được lựa chọn<br><span>nhiều nhất.</span></h2>
+    <p>Toàn diện, có tracking đầy đủ, họp review hàng tuần và landing page tối ưu. Đây là gói phù hợp nhất để scale Lead bền vững.</p>
+    <div class="cta-strip">
+      <button class="btn-primary" onclick="showPage('services')">So sánh các gói khác</button>
+      <button class="btn-outline" onclick="showPage('proposal')">Xem Proposal mẫu</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
+    <div class="footer-copy">Gói Performance Core · Performance Marketing · HN &amp; HCM</div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: SERVICE DETAIL - SCALE & OPTIMIZE ==================== -->
+<div id="page-scale-optimize" class="page">
+  <div class="service-detail-header" style="background:linear-gradient(135deg,#1a2340 0%,#0f172a 60%,#2d1b00 100%);">
+    <div class="back-btn" onclick="showPage('services')" style="color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.1);">← Quay lại Dịch vụ</div>
+    <div class="detail-pkg-num" style="color:rgba(249,115,22,0.9);">Gói 03 · Dành cho doanh nghiệp scale lớn · Chiến lược sâu rộng</div>
+    <div class="detail-pkg-title" style="color:#fff;">SCALE &amp;<br><span style="color:var(--accent);">OPTIMIZE</span></div>
+    <div class="detail-pkg-price-row">
+      <div class="detail-price-main" style="color:var(--accent);">25.000.000 VNĐ / tháng</div>
+      <div class="detail-price-note" style="background:rgba(249,115,22,0.15);border-color:rgba(249,115,22,0.3);color:rgba(249,115,22,0.9);">+ 05–07% ngân sách</div>
+      <div class="detail-price-note" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);">Dedicated Account Manager</div>
+    </div>
+    <p class="detail-desc" style="color:rgba(255,255,255,0.82);">Gói hợp tác chiến lược sâu rộng nhất. Dành cho doanh nghiệp đã có nền tảng, muốn scale ngân sách lớn, xây hệ thống dữ liệu bài bản và tối ưu toàn funnel từ awareness đến chốt sale để tối đa hóa lợi nhuận.</p>
+  </div>
+
+  <div class="detail-body">
+    <!-- KPI highlights -->
+    <div>
+      <div class="detail-section-title">Cam kết đầu ra</div>
+      <div class="kpi-highlight-grid">
+        <div class="kpi-highlight">
+          <div class="kpi-highlight-num">3<span class="suffix">kênh</span></div>
+          <div class="kpi-highlight-label">FB + TikTok + Google</div>
+        </div>
+        <div class="kpi-highlight">
+          <div class="kpi-highlight-num">1<span class="suffix">AM</span></div>
+          <div class="kpi-highlight-label">Account Manager riêng</div>
+        </div>
+        <div class="kpi-highlight">
+          <div class="kpi-highlight-num">Full<span class="suffix"></span></div>
+          <div class="kpi-highlight-label">Tracking Stack</div>
+        </div>
+        <div class="kpi-highlight">
+          <div class="kpi-highlight-num">KOL<span class="suffix">/KOC</span></div>
+          <div class="kpi-highlight-label">Brief &amp; Đo lường</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deliverables -->
+    <div>
+      <div class="detail-section-title">Toàn bộ deliverables</div>
+      <div class="deliverable-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🌐</div>
+          <h4>Multi-channel: FB + TikTok + Google</h4>
+          <p>Quản lý đồng thời 3 kênh với chiến lược riêng biệt: Facebook Ads cho nhóm chủ lực, TikTok cho nhóm trẻ, Google Search/Display cho intent-based targeting.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent">Facebook Ads</span>
+            <span class="mini-tag">TikTok Ads</span>
+            <span class="mini-tag accent2">Google Ads</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔬</div>
+          <h4>Full tracking stack (GA4 + GTM + CAPI)</h4>
+          <p>Hệ thống đo lường toàn diện nhất: GA4 với custom events, Google Tag Manager, Facebook CAPI, TikTok Pixel, custom attribution model. Không bỏ sót bất kỳ điểm chạm nào.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent2">GA4 Custom</span>
+            <span class="mini-tag">GTM</span>
+            <span class="mini-tag accent">CAPI Server-side</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔍</div>
+          <h4>CRO audit + tối ưu funnel toàn diện</h4>
+          <p>Phân tích toàn bộ funnel từ click đến chốt sale: heatmap, session recording, A/B testing liên tục. Xác định điểm rớt Lead ở từng bước và tối ưu từng màn hình.</p>
+          <div class="tag-list">
+            <span class="mini-tag">Heatmap</span>
+            <span class="mini-tag accent">Full Funnel</span>
+            <span class="mini-tag accent2">Continuous A/B</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎙️</div>
+          <h4>KOL/KOC brief &amp; báo cáo hiệu quả</h4>
+          <p>Xây dựng brief cho KOC/KOL, lựa chọn đúng đối tượng phù hợp ngành, setup tracking link riêng để đo lường ROI chính xác từng người.</p>
+          <div class="tag-list">
+            <span class="mini-tag">KOC Brief</span>
+            <span class="mini-tag accent">ROI Tracking</span>
+            <span class="mini-tag">Selection</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📊</div>
+          <h4>Custom dashboard Looker Studio</h4>
+          <p>Dashboard tùy chỉnh hoàn toàn theo yêu cầu: tổng hợp dữ liệu từ tất cả kênh, custom metrics theo business model, có thể chia sẻ với đội sales và management.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent2">Looker Studio</span>
+            <span class="mini-tag">Custom Metrics</span>
+            <span class="mini-tag">Multi-channel</span>
+          </div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">👤</div>
+          <h4>Dedicated Account Manager</h4>
+          <p>Account Manager riêng — đầu mối liên lạc duy nhất, hiểu sâu business của bạn, chủ động đề xuất tối ưu và có thể họp bất kỳ lúc nào trong tuần.</p>
+          <div class="tag-list">
+            <span class="mini-tag accent">Dedicated AM</span>
+            <span class="mini-tag">Priority Support</span>
+            <span class="mini-tag accent2">Flexible Meeting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suitable -->
+    <div>
+      <div class="detail-section-title">Gói này phù hợp với ai?</div>
+      <div class="suitable-grid">
+        <div class="suitable-card">
+          <div class="icon">🚀</div>
+          <h4>Ngân sách ads &gt; 100 triệu/tháng</h4>
+          <p>Đang chi lớn và muốn đảm bảo từng đồng được tối ưu với hệ thống đo lường bài bản nhất.</p>
+        </div>
+        <div class="suitable-card">
+          <div class="icon">🌐</div>
+          <h4>Muốn đa kênh đồng bộ</h4>
+          <p>Cần quản lý Facebook, TikTok và Google cùng lúc với attribution chính xác, không bị overlap ngân sách.</p>
+        </div>
+        <div class="suitable-card">
+          <div class="icon">📊</div>
+          <h4>Cần báo cáo cho Ban lãnh đạo</h4>
+          <p>Cần dashboard và báo cáo chuyên nghiệp để trình bày với C-level về hiệu quả đầu tư marketing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div>
+      <div class="detail-section-title">Cơ cấu chi phí</div>
+      <div class="pricing-breakdown">
+        <div class="pricing-breakdown-header">
+          <h3>Gói SCALE &amp; OPTIMIZE</h3>
+          <div class="price-big">25tr<span style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.7);">+ % ngân sách</span></div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Phí quản lý Agency (cố định)</div>
+          <div class="pricing-row-value">25.000.000 VNĐ / tháng</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">% Ngân sách quảng cáo</div>
+          <div class="pricing-row-value">05–07% (thỏa thuận)</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Ngân sách ads tối thiểu gợi ý</div>
+          <div class="pricing-row-value">100–300+ triệu VNĐ / tháng</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Multi-channel Setup (FB+TT+GG)</div>
+          <div class="pricing-row-value">Bao gồm trong gói</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Custom Looker Studio Dashboard</div>
+          <div class="pricing-row-value">Bao gồm trong gói</div>
+        </div>
+        <div class="pricing-row">
+          <div class="pricing-row-label">Dedicated Account Manager</div>
+          <div class="pricing-row-value">Bao gồm trong gói</div>
+        </div>
+        <div class="pricing-row total">
+          <div class="pricing-row-label">Cam kết tối thiểu</div>
+          <div class="pricing-row-value">3–6 tháng</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Sẵn sàng<br><span>scale đúng cách?</span></h2>
+    <p>Gói Scale &amp; Optimize được thiết kế để tối đa hóa lợi nhuận khi bạn muốn đầu tư lớn. Hãy nói chuyện về chiến lược của bạn.</p>
+    <div class="cta-strip">
+      <button class="btn-primary" onclick="showPage('services')">Xem tất cả gói dịch vụ</button>
+      <button class="btn-outline" onclick="showPage('proposal')">Xem Proposal mẫu</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
+    <div class="footer-copy">Gói Scale &amp; Optimize · Performance Marketing · HN &amp; HCM</div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: SERVICE DETAIL - LANDING PAGE ==================== -->
+<div id="page-landing-page" class="page">
+  <div class="service-detail-header" style="background:linear-gradient(135deg,#fff4ec 0%,#fef3e8 50%,#e8f0fe 100%);">
+    <div class="back-btn" onclick="showPage('services')">← Quay lại Dịch vụ</div>
+    <div class="detail-pkg-num" style="color:var(--accent);">Dịch vụ đơn lẻ · LP</div>
+    <div class="detail-pkg-title" style="color:var(--text);">LANDING<br><span style="color:var(--accent);">PAGE</span></div>
+    <div class="detail-pkg-price-row">
+      <div class="detail-price-main">Từ 3.000.000 VNĐ</div>
+      <div class="detail-price-note">Một lần · Sở hữu vĩnh viễn</div>
+      <div class="detail-price-note" style="background:var(--accent-light);border-color:var(--border2);color:var(--accent);">Cam kết CR ≥ 3%</div>
+    </div>
+    <p class="detail-desc">Thiết kế và phát triển landing page chuyên dụng cho chiến dịch quảng cáo. Tối ưu tốc độ tải, CTA rõ ràng, form thu Lead được A/B test liên tục. Đây là yếu tố quyết định CPL của mọi chiến dịch.</p>
+  </div>
+
+  <div class="detail-body">
+    <div>
+      <div class="detail-section-title">Bao gồm trong dịch vụ</div>
+      <div class="deliverable-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎨</div>
+          <h4>Thiết kế UI tối ưu chuyển đổi</h4>
+          <p>Layout được thiết kế theo nguyên tắc CRO: hero section rõ USP, trust signals (logo khách hàng, số liệu), form ngắn gọn, CTA nổi bật.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">⚡</div>
+          <h4>Tốc độ tải &lt; 2 giây</h4>
+          <p>Tối ưu hình ảnh, minify CSS/JS, lazy loading. Tốc độ tải nhanh trực tiếp ảnh hưởng đến Quality Score và CPL trên Facebook/Google.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📱</div>
+          <h4>Responsive hoàn toàn (Mobile-first)</h4>
+          <p>70%+ traffic từ mobile. Landing page được thiết kế mobile-first, kiểm tra trên 10+ thiết bị phổ biến trước khi bàn giao.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔷</div>
+          <h4>Tích hợp tracking cơ bản</h4>
+          <p>Gắn Facebook Pixel, sự kiện Lead/Submit. Có thể tích hợp thêm GA4, TikTok Pixel nếu yêu cầu (phí bổ sung).</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="detail-section-title">Dịch vụ bổ sung tùy chọn</div>
+      <div class="addon-grid">
+        <div class="addon-card">
+          <div class="addon-code">TK</div>
+          <div class="addon-info">
+            <h4>Thêm Tracking đầy đủ</h4>
+            <p>GA4 + GTM + TikTok Pixel + CAPI server-side</p>
+            <div class="addon-price">+2.000.000 VNĐ</div>
+          </div>
+        </div>
+        <div class="addon-card">
+          <div class="addon-code">AB</div>
+          <div class="addon-info">
+            <h4>A/B Test 2 biến thể</h4>
+            <p>Test headline, hero image, form layout — chạy song song, chọn winner sau 2 tuần</p>
+            <div class="addon-price">+1.500.000 VNĐ</div>
+          </div>
+        </div>
+        <div class="addon-card">
+          <div class="addon-code">CW</div>
+          <div class="addon-info">
+            <h4>Viết nội dung (Copywriting)</h4>
+            <p>Headline, sub-headline, bullet points USP, CTA copy được tối ưu cho chuyển đổi</p>
+            <div class="addon-price">+1.000.000 VNĐ</div>
+          </div>
+        </div>
+        <div class="addon-card">
+          <div class="addon-code">MN</div>
+          <div class="addon-info">
+            <h4>Bảo trì 3 tháng</h4>
+            <p>Sửa lỗi, cập nhật nội dung, điều chỉnh nhỏ trong 3 tháng sau bàn giao</p>
+            <div class="addon-price">+500.000 VNĐ/tháng</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Landing page đúng cách<br><span>giảm CPL 20–30%.</span></h2>
+    <p>Đừng để traffic quảng cáo đắt tiền rơi vào một trang không được tối ưu. Đầu tư 3 triệu để tiết kiệm hàng chục triệu mỗi tháng.</p>
+    <div class="cta-strip">
+      <button class="btn-primary" onclick="showPage('services')">Xem tất cả dịch vụ</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
+    <div class="footer-copy">Landing Page · CRO · Performance Marketing · HN &amp; HCM</div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: SERVICE DETAIL - TRACKING SETUP ==================== -->
+<div id="page-tracking-setup" class="page">
+  <div class="service-detail-header" style="background:linear-gradient(135deg,#eff6ff 0%,#e8f0fe 100%);">
+    <div class="back-btn" onclick="showPage('services')">← Quay lại Dịch vụ</div>
+    <div class="detail-pkg-num" style="color:var(--accent2);">Dịch vụ đơn lẻ · TK</div>
+    <div class="detail-pkg-title" style="color:var(--text);">TRACKING<br><span style="color:var(--accent2);">SETUP</span></div>
+    <div class="detail-pkg-price-row">
+      <div class="detail-price-main">Từ 2.000.000 VNĐ</div>
+      <div class="detail-price-note">Một lần · Kiểm tra &amp; xác nhận đầy đủ</div>
+    </div>
+    <p class="detail-desc">Cài đặt hệ thống tracking đầy đủ: GA4, GTM, Facebook Pixel, Conversion API (server-side), TikTok Pixel. Không có tracking đúng = không thể tối ưu quảng cáo. Đây là nền tảng của mọi quyết định data-driven.</p>
+  </div>
+
+  <div class="detail-body">
+    <div>
+      <div class="detail-section-title">Các công cụ được cài đặt</div>
+      <div class="deliverable-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📊</div>
+          <h4>Google Analytics 4 (GA4)</h4>
+          <p>Setup GA4 property, cấu hình custom events, goals và conversions. Bật Enhanced Measurement, liên kết với Google Ads nếu cần.</p>
+          <div class="tag-list"><span class="mini-tag accent2">GA4</span><span class="mini-tag">Custom Events</span><span class="mini-tag">Conversions</span></div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🏷️</div>
+          <h4>Google Tag Manager (GTM)</h4>
+          <p>Setup container GTM, di chuyển tất cả tracking vào GTM để quản lý tập trung. Không cần động vào code website mỗi khi cần thêm tracking mới.</p>
+          <div class="tag-list"><span class="mini-tag accent2">GTM Container</span><span class="mini-tag">Centralized</span></div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔷</div>
+          <h4>Facebook Pixel + Conversion API</h4>
+          <p>Cài Pixel browser-side và CAPI server-side để đảm bảo dữ liệu chính xác kể cả khi browser block cookie (iOS 14.5+).</p>
+          <div class="tag-list"><span class="mini-tag accent">FB Pixel</span><span class="mini-tag accent">CAPI Server-side</span><span class="mini-tag">iOS Safe</span></div>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎵</div>
+          <h4>TikTok Pixel</h4>
+          <p>Cài TikTok Pixel, cấu hình các sự kiện chuẩn (ViewContent, AddToCart, Lead, Purchase). Liên kết với TikTok Ads Manager và kích hoạt Events API.</p>
+          <div class="tag-list"><span class="mini-tag">TikTok Pixel</span><span class="mini-tag">Events API</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="detail-section-title">Quy trình thực hiện</div>
+      <div class="process-detail-list">
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">D1</div><div class="pdi-step-label">Ngày</div></div>
+          <div class="pdi-content"><h4>Audit hiện trạng</h4><p>Kiểm tra tracking hiện tại: có đang bị duplicate không? Event có fire đúng không? Pixel có bị block không?</p></div>
+        </div>
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">D2–3</div><div class="pdi-step-label">Ngày</div></div>
+          <div class="pdi-content"><h4>Cài đặt &amp; cấu hình</h4><p>Setup GTM container, cài tất cả pixels và APIs, cấu hình events theo hành trình khách hàng của doanh nghiệp.</p></div>
+        </div>
+        <div class="process-detail-item">
+          <div class="pdi-step"><div class="pdi-step-num">D4–5</div><div class="pdi-step-label">Ngày</div></div>
+          <div class="pdi-content"><h4>Test &amp; xác nhận</h4><p>Dùng Facebook Event Tester, GA4 Debugger, GTM Preview để xác nhận 100% events đang fire đúng. Bàn giao báo cáo verification.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Không có tracking tốt —<br><span>không thể tối ưu.</span></h2>
+    <p>Mọi quyết định scale hay cut budget đều cần data chính xác. Hãy xây nền tảng đúng ngay từ đầu.</p>
+    <div class="cta-strip">
+      <button class="btn-primary" onclick="showPage('services')">Xem tất cả dịch vụ</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
+    <div class="footer-copy">Tracking Setup · Data-Driven · Performance Marketing · HN &amp; HCM</div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: SERVICE DETAIL - DASHBOARD ==================== -->
+<div id="page-dashboard" class="page">
+  <div class="service-detail-header" style="background:linear-gradient(135deg,#f4f6fb 0%,#e8f0fe 100%);">
+    <div class="back-btn" onclick="showPage('services')">← Quay lại Dịch vụ</div>
+    <div class="detail-pkg-num" style="color:var(--accent2);">Dịch vụ đơn lẻ · DB</div>
+    <div class="detail-pkg-title" style="color:var(--text);">DASHBOARD<br><span style="color:var(--accent2);">LOOKER</span></div>
+    <div class="detail-pkg-price-row">
+      <div class="detail-price-main">Từ 3.500.000 VNĐ</div>
+      <div class="detail-price-note">Một lần · Real-time · Multi-channel</div>
+    </div>
+    <p class="detail-desc">Xây dựng dashboard Looker Studio tổng hợp dữ liệu từ nhiều kênh quảng cáo (Facebook, Google, TikTok) hiển thị theo thời gian thực. Một màn hình — tất cả số liệu quan trọng.</p>
+  </div>
+
+  <div class="detail-body">
+    <div>
+      <div class="detail-section-title">Dashboard bao gồm</div>
+      <div class="deliverable-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📈</div>
+          <h4>Overview tổng quan</h4>
+          <p>Tổng chi tiêu, tổng Lead, CPL trung bình, ROAS theo ngày/tuần/tháng. So sánh với kỳ trước tự động.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔀</div>
+          <h4>Breakdown theo kênh</h4>
+          <p>So sánh hiệu quả từng kênh: FB vs TikTok vs Google. Biết chính xác kênh nào đang sinh ra Lead rẻ nhất.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎨</div>
+          <h4>Hiệu quả theo Creative</h4>
+          <p>Bảng xếp hạng creative theo CPL, CTR, CR. Biết mẫu quảng cáo nào đang hoạt động tốt nhất.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">👥</div>
+          <h4>Phân tích Audience</h4>
+          <p>Lead breakdown theo tuổi, giới tính, thiết bị, vị trí địa lý. Hiểu rõ ai đang chuyển đổi tốt nhất.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Một màn hình —<br><span>tất cả số liệu.</span></h2>
+    <p>Không còn phải vào từng nền tảng để xem báo cáo. Dashboard real-time giúp bạn ra quyết định nhanh hơn.</p>
+    <div class="cta-strip">
+      <button class="btn-primary" onclick="showPage('services')">Xem tất cả dịch vụ</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
+    <div class="footer-copy">Dashboard · Looker Studio · Data-Driven · HN &amp; HCM</div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: SERVICE DETAIL - AUDIT ==================== -->
+<div id="page-audit" class="page">
+  <div class="service-detail-header" style="background:linear-gradient(135deg,#f4f6fb 0%,#fef3e8 100%);">
+    <div class="back-btn" onclick="showPage('services')">← Quay lại Dịch vụ</div>
+    <div class="detail-pkg-num" style="color:var(--accent);">Dịch vụ đơn lẻ · AU</div>
+    <div class="detail-pkg-title" style="color:var(--text);">AUDIT<br><span style="color:var(--accent);">ADS ACCOUNT</span></div>
+    <div class="detail-pkg-price-row">
+      <div class="detail-price-main">Từ 1.500.000 VNĐ</div>
+      <div class="detail-price-note">Một lần · Báo cáo &amp; Đề xuất cụ thể</div>
+    </div>
+    <p class="detail-desc">Phân tích toàn diện tài khoản Facebook Ads và/hoặc Google Ads hiện tại của bạn. Chỉ ra đúng vấn đề, đề xuất hướng tối ưu cụ thể để cải thiện hiệu quả ngay lập tức.</p>
+  </div>
+
+  <div class="detail-body">
+    <div>
+      <div class="detail-section-title">Audit bao gồm</div>
+      <div class="deliverable-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🔍</div>
+          <h4>Cấu trúc tài khoản &amp; Campaign</h4>
+          <p>Kiểm tra cấu trúc Campaign, Ad Set, Ad có đúng best practices không. Phát hiện lãng phí ngân sách do setup sai.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">👥</div>
+          <h4>Phân tích Audience &amp; Targeting</h4>
+          <p>Đánh giá tệp đang target có phù hợp với sản phẩm không. Phát hiện audience overlap gây tăng CPL không cần thiết.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">🎨</div>
+          <h4>Đánh giá Creative hiện tại</h4>
+          <p>Phân tích CTR, relevance score của từng mẫu ads. Đề xuất hướng cải thiện hook, CTA và format.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-icon">📋</div>
+          <h4>Báo cáo + Đề xuất ưu tiên</h4>
+          <p>Báo cáo đầy đủ bằng PDF/Slide với danh sách vấn đề được xếp ưu tiên và action plan cụ thể để tối ưu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Biết vấn đề —<br><span>mới giải quyết được.</span></h2>
+    <p>1.500.000 đồng để biết chính xác tài khoản quảng cáo của bạn đang lãng phí ở đâu và cần sửa gì trước.</p>
+    <div class="cta-strip">
+      <button class="btn-primary" onclick="showPage('services')">Xem tất cả dịch vụ</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Số Hóa<span>.</span> Agency</div>
+    <div class="footer-copy">Audit Ads Account · Performance Marketing · HN &amp; HCM</div>
   </footer>
 </div>
 
@@ -1600,14 +2984,14 @@
     <div>
       <div class="client-badge">Client Brief · Active</div>
       <h1 style="font-family:var(--display);font-size:clamp(36px,5vw,64px);font-weight:800;letter-spacing:-2px;line-height:1.0;margin-bottom:12px;">SOT<br><span style="color:var(--text3);font-size:0.55em;letter-spacing:0;">Trung Tâm Tiếng Anh Online</span></h1>
-      <p style="color:var(--text2);font-size:14px;max-width:480px;line-height:1.7;">Khoá học tiếng Anh toàn diện cho người mới bắt đầu qua Zoom — 24 buổi học lý thuyết & thực hành, cam kết đầu ra, giá cả phải chăng.</p>
+      <p style="color:var(--text2);font-size:14px;max-width:480px;line-height:1.7;">Khoá học tiếng Anh toàn diện cho người mới bắt đầu qua Zoom — 24 buổi học lý thuyết &amp; thực hành, cam kết đầu ra, giá cả phải chăng.</p>
     </div>
     <div class="brief-meta">
       <div class="meta-item">
         <strong>sot.com</strong>Website
       </div>
       <div class="meta-item">
-        <strong>HN & TP.HCM</strong>Địa bàn
+        <strong>HN &amp; TP.HCM</strong>Địa bàn
       </div>
       <div class="meta-item">
         <strong>45 ngày</strong>Timeline
@@ -1652,7 +3036,7 @@
         <div class="data-cell">
           <div class="data-label">Doanh thu dự kiến</div>
           <div class="data-value accent">~258tr</div>
-          <div class="data-sub">Nếu đạt KPI & tỷ lệ chốt 32%</div>
+          <div class="data-sub">Nếu đạt KPI &amp; tỷ lệ chốt 32%</div>
         </div>
       </div>
     </div>
@@ -1710,7 +3094,7 @@
         </div>
         <div class="budget-row" style="padding-left:20px">
           <div class="budget-label" style="font-size:10px;color:var(--text2)">↳ TikTok Ads (Net)</div>
-          <div class="budget-track"><div class="budget-fill accent2" style="width:11%;opacity:0.8"></div></div>
+          <div class="budget-track"><div class="budget-fill media" style="width:11%;opacity:0.8"></div></div>
           <div class="budget-amt" style="font-size:11px;color:var(--text2)">10.000.000 đ</div>
         </div>
         <div class="budget-row">
@@ -1762,7 +3146,7 @@
           <h4>👨‍🎓 Sinh viên</h4>
           <div class="tag-row">
             <span class="tag">18–24 tuổi</span>
-            <span class="tag accent">HN & HCM</span>
+            <span class="tag accent">HN &amp; HCM</span>
             <span class="tag">Cần CV xin việc</span>
             <span class="tag">Tiết kiệm chi phí</span>
           </div>
@@ -1847,11 +3231,11 @@
   <div class="proposal-header">
     <div class="section-label">// Proposal · SOT English Center</div>
     <div class="proposal-title">
-      Từ 20 triệu<br>
-      <span class="highlight">tạo ra 94 triệu.</span><br>
-      Lần này, làm lớn hơn.
+      Scale-up ngân sách 4.5x:<br>
+      <span class="highlight">Hệ thống hóa lộ trình</span><br>
+      tăng trưởng của SOT.
     </div>
-    <p class="proposal-sub">SOT đã chứng minh mô hình hoạt động — ROAS ~4.7x, tỷ lệ chốt 32%. Bây giờ là lúc hệ thống hoá, tối ưu CPL và nhân quy mô lên 4.5x ngân sách với kết quả có thể dự báo.</p>
+    <p class="proposal-sub">Lịch sử chiến dịch đã chứng minh tỷ lệ chuyển đổi ấn tượng 32%. Mục tiêu hiện tại không chỉ là tăng doanh thu, mà là xây dựng một hệ thống đo lường bài bản để tối ưu CPL và đảm bảo mọi chỉ số đều nằm trong vùng an toàn khi mở rộng quy mô.</p>
     <div style="display:flex;gap:12px;flex-wrap:wrap;">
       <span class="tag accent">45 ngày · HN + HCM</span>
       <span class="tag accent2">90.000.000đ Gross Budget</span>
@@ -1862,15 +3246,15 @@
   <!-- Executive Summary -->
   <div class="prop-section">
     <div class="section-label">// Executive Summary</div>
-    <h2>Tại sao chiến dịch này sẽ thành công?</h2>
+    <h2>Lý do triển khai chiến dịch?</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="background:var(--surface);padding:40px;">
-        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:16px;color:var(--text);color:var(--accent2);">SOT đã có nền tảng thật</h3>
-        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Không phải xây từ đầu — SOT đã có ROAS 4.7x, tỷ lệ chốt 32%, và sản phẩm được thị trường xác nhận. Đây là điểm mạnh cực kỳ quan trọng mà không phải khách hàng nào cũng có ngay từ đầu.</p>
+      <div style="background:var(--surface);padding:40px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);">
+        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:16px;color:var(--accent2);">SOT đã có nền tảng thật</h3>
+        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Không phải xây từ đầu — SOT đã có ROAS 4.7x, tỷ lệ chốt 32%, và sản phẩm được thị trường xác nhận. Đây là điểm mạnh cực kỳ quan trọng giúp Số Hóa Agency xác định KPI phù hợp.</p>
       </div>
-      <div style="background:var(--surface);padding:40px;">
-        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:16px;color:var(--text);color:var(--accent);">Vấn đề cần giải quyết</h3>
-        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Ngân sách tăng 4.5x nhưng chưa có hệ thống tracking đủ tốt để tối ưu. Chưa có landing page chuyên dụng. Chưa phân tách rõ funnel Facebook vs TikTok. Đây chính là việc chúng tôi sẽ làm.</p>
+      <div style="background:var(--surface);padding:40px;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);">
+        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:16px;color:var(--accent);">Vấn đề cần giải quyết</h3>
+        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Ngân sách tăng 4.5x nhưng chưa có hệ thống tracking đủ tốt để tối ưu. Chưa có landing page chuyên dụng. Chưa phân tách rõ funnel Facebook vs TikTok. Kết quả trước đây đến từ cao điểm nhu cầu — cần chiến lược tăng trưởng dài hạn, ổn định hơn.</p>
       </div>
     </div>
   </div>
@@ -1878,16 +3262,16 @@
   <!-- Problem & Opportunity -->
   <div class="prop-section">
     <div class="section-label">// Phân tích</div>
-    <h2>Vấn đề & Cơ hội</h2>
+    <h2>Vấn đề &amp; Cơ hội</h2>
     <div class="po-grid">
       <div class="po-card problem">
         <div class="po-label">Vấn đề hiện tại</div>
         <ul class="po-list">
-          <li class="po-item">Chưa có landing page chuyên dụng → tỷ lệ chuyển đổi thấp hơn tiềm năng</li>
-          <li class="po-item">Tracking chưa đầy đủ → không biết Lead đến từ kênh nào, giai đoạn nào rớt</li>
-          <li class="po-item">Chỉ có Facebook, chưa khai thác TikTok đúng cách cho nhóm 18–24</li>
+          <li class="po-item">Chưa có landing page chuyên dụng → tỷ lệ chuyển đổi không ổn định, lúc cao lúc thấp</li>
+          <li class="po-item">Tracking chưa đầy đủ → không biết Lead đến chính xác từ kênh nào, giai đoạn nào chưa tối ưu</li>
+          <li class="po-item">Chỉ mới triển khai kênh Facebook, chưa khai thác kênh TikTok đúng cách cho nhóm 18–24</li>
           <li class="po-item">Chưa có hệ thống qualify Lead → sales gọi cả Lead không đủ tiêu chuẩn</li>
-          <li class="po-item">KOL/KOC 10tr nhưng chưa có tiêu chí đo lường hiệu quả cụ thể</li>
+          <li class="po-item">Kết quả trước hoàn toàn đến từ việc tận dụng cao điểm nhu cầu — chưa có chiến lược bền vững</li>
         </ul>
       </div>
       <div class="po-card opportunity">
@@ -1897,7 +3281,7 @@
           <li class="po-item">TikTok chưa cạnh tranh trong ngành tiếng Anh online → CPL thấp hơn Facebook</li>
           <li class="po-item">Landing page tối ưu CRO có thể giảm CPL thêm 20–30%</li>
           <li class="po-item">Nhóm 22–35 tuổi đang chủ động tìm kiếm khoá nâng cao kỹ năng</li>
-          <li class="po-item">Cam kết đầu ra là USP cực mạnh, chưa được khai thác tốt trong creative hiện tại</li>
+          <li class="po-item">Cam kết đầu ra và lộ trình cá nhân hóa là USP cực mạnh, chưa được khai thác tốt trong creative hiện tại</li>
         </ul>
       </div>
     </div>
@@ -1923,7 +3307,7 @@
         <div class="swot-label">W</div>
         <div class="swot-full">Weaknesses · Điểm yếu</div>
         <ul class="swot-list">
-          <li class="swot-item">Chưa có hệ thống tracking & đo lường đầy đủ</li>
+          <li class="swot-item">Chưa có hệ thống tracking &amp; đo lường đầy đủ</li>
           <li class="swot-item">Thiếu landing page chuyên dụng cho quảng cáo</li>
           <li class="swot-item">Brand awareness chưa mạnh ở thị trường HCM</li>
           <li class="swot-item">Content chưa khai thác hết USP "cam kết đầu ra"</li>
@@ -1934,7 +3318,7 @@
         <div class="swot-label">O</div>
         <div class="swot-full">Opportunities · Cơ hội</div>
         <ul class="swot-list">
-          <li class="swot-item">Nhu cầu học tiếng Anh để đi làm tăng mạnh sau COVID</li>
+          <li class="swot-item">Nhu cầu học tiếng Anh để đi làm và đổi điểm vào đại học tăng mạnh</li>
           <li class="swot-item">TikTok Ads còn rẻ trong ngành giáo dục online</li>
           <li class="swot-item">Nhóm 22–35 sẵn sàng chi cho kỹ năng mềm</li>
           <li class="swot-item">HCM là thị trường mới, ít đối thủ địa phương của SOT</li>
@@ -1956,131 +3340,88 @@
 
   <!-- Big Idea / Strategy -->
   <div class="prop-section">
-    <div class="section-label">// Chiến lược</div>
+    <div class="section-label">// Chiến lược thông điệp</div>
     <h2>Định hướng chiến lược</h2>
     <div class="strategy-block">
       <div class="strategy-kw">Campaign Platform</div>
-      <div class="strategy-headline">Tiếng Anh<br><span>không phải đích đến —</span><br>là bàn đạp.</div>
-      <p class="strategy-sub">SOT không bán khoá học. SOT bán cơ hội: thăng tiến, ra ngoài, tự tin hơn. Mỗi creative, mỗi landing page, mỗi KOC post đều phải kể câu chuyện đó.</p>
+      <div class="strategy-headline">Học Tiếng Anh Có<br><span>"KPI":</span><br>Mỗi buổi học là một nấc thang.</div>
+      <p class="strategy-sub">Khách hàng đã quá chán với việc học tiếng Anh "mù mờ". SOT thay đổi hoàn toàn điều đó: năng lực giao tiếp được đo lường cụ thể như một dự án, với KPI rõ ràng từng buổi học.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;">
-        <div style="font-family:var(--display);font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Thông điệp chính</div>
-        <div style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:8px;">"Học xong là dùng được ngay"</div>
-        <p style="font-size:13px;color:var(--text2);line-height:1.6;">Nhấn mạnh cam kết đầu ra thực tế — không phải hứa hẹn, mà là bằng chứng: đánh giá từng buổi, điều chỉnh lộ trình.</p>
+        <div style="font-family:var(--display);font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Key Message</div>
+        <div style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:8px;">"Tiến bộ có số liệu, thăng tiến có cơ sở"</div>
+        <p style="font-size:13px;color:var(--text2);line-height:1.6;">SOT không để học viên "tự bơi". Mọi lỗ hổng đều được report và khắc phục ngay sau mỗi buổi Zoom.</p>
       </div>
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;">
         <div style="font-family:var(--display);font-size:10px;color:var(--accent2);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Tone of Voice</div>
-        <div style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:8px;">Thực chiến · Gần gũi · Đáng tin</div>
-        <p style="font-size:13px;color:var(--text2);line-height:1.6;">Không hoa mỹ, không hứa hẹn quá. Dùng testimonial thật, kết quả thật, học viên thật.</p>
+        <div style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:8px;">Chuyên nghiệp · Khích lệ · Result-oriented</div>
+        <p style="font-size:13px;color:var(--text2);line-height:1.6;">Dùng ngôn ngữ của sự thăng tiến: lộ trình, KPI, báo cáo, hiệu suất. Thẳng thắn, không sáo rỗng.</p>
       </div>
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;">
         <div style="font-family:var(--display);font-size:10px;color:#a855f7;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Hook chính</div>
-        <div style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:8px;">"24 buổi — từ 0 đến giao tiếp được"</div>
-        <p style="font-size:13px;color:var(--text2);line-height:1.6;">Cụ thể, có thể hình dung được, giải quyết trực tiếp nỗi sợ "học mãi không tiến bộ".</p>
+        <div style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:8px;">"Đừng học tiếng Anh theo cảm giác. Hãy đo lường sự tự tin!"</div>
+        <p style="font-size:13px;color:var(--text2);line-height:1.6;">Đánh vào nỗi đau "học mãi không thấy giỏi", tạo sự tò mò và dẫn thẳng vào USP của SOT.</p>
       </div>
     </div>
   </div>
 
   <!-- Channel Plan -->
   <div class="prop-section">
-    <div class="section-label">// Kế hoạch kênh</div>
-    <h2>Phân bổ kênh & ngân sách</h2>
+    <div class="section-label">// Ma trận kênh truyền thông</div>
+    <h2>Phân bổ kênh &amp; ngân sách</h2>
     <div class="channel-grid">
       <div class="channel-card">
         <div class="channel-icon">📘</div>
         <div class="channel-name">Facebook Ads</div>
-        <div class="channel-budget">50.000.000 đ (Net)</div>
-        <div class="channel-goal">Kênh chủ lực — nhắm đúng nhóm 22–35 tuổi đi làm đang muốn nâng kỹ năng. Dùng Lead Form + Landing Page song song để so sánh CR.</div>
+        <div class="channel-budget">50.000.000 đ (Net) · Kênh chủ lực</div>
+        <div class="channel-goal">Nhắm đúng nhóm 22–35 tuổi đi làm đang muốn nâng kỹ năng. Format Video/Carousel nhấn mạnh nỗi đau người đi làm. Lead Form + Landing Page song song.</div>
         <div class="channel-kpi">
-          <div class="ckpi">
-            <span class="ckpi-label">Target CPL</span>
-            <span class="ckpi-val">≤ 250.000đ</span>
-          </div>
-          <div class="ckpi">
-            <span class="ckpi-label">Lead dự kiến</span>
-            <span class="ckpi-val">~200 Leads</span>
-          </div>
-          <div class="ckpi">
-            <span class="ckpi-label">Format chính</span>
-            <span class="ckpi-val">Video + Carousel</span>
-          </div>
+          <div class="ckpi"><span class="ckpi-label">Target CPL</span><span class="ckpi-val">≤ 250.000đ</span></div>
+          <div class="ckpi"><span class="ckpi-label">Lead dự kiến</span><span class="ckpi-val">~200 Leads</span></div>
+          <div class="ckpi"><span class="ckpi-label">Format chính</span><span class="ckpi-val">Video + Carousel</span></div>
         </div>
       </div>
 
       <div class="channel-card">
         <div class="channel-icon">🎵</div>
-        <div class="channel-name">TikTok Ads</div>
-        <div class="channel-budget">10.000.000 đ (Net)</div>
-        <div class="channel-goal">Test kênh mới nhắm nhóm 18–24 tuổi (sinh viên). CPL thường thấp hơn FB trong ngành edtech. Dùng In-Feed Ads với video ngắn 15–30s.</div>
+        <div class="channel-name">TikTok Ads + KOC</div>
+        <div class="channel-budget">10.000.000 đ Ads + 10.000.000 đ KOC</div>
+        <div class="channel-goal">Nhắm nhóm 18–24 tuổi (sinh viên). In-Feed Ads video ngắn 15–30s. KOC micro (5–50k followers) review trải nghiệm thực tế học qua Zoom.</div>
         <div class="channel-kpi">
-          <div class="ckpi">
-            <span class="ckpi-label">Target CPL</span>
-            <span class="ckpi-val">≤ 150.000đ</span>
-          </div>
-          <div class="ckpi">
-            <span class="ckpi-label">Lead dự kiến</span>
-            <span class="ckpi-val">~60–70 Leads</span>
-          </div>
-          <div class="ckpi">
-            <span class="ckpi-label">Format chính</span>
-            <span class="ckpi-val">In-Feed Video</span>
-          </div>
+          <div class="ckpi"><span class="ckpi-label">Target CPL</span><span class="ckpi-val">≤ 150.000đ</span></div>
+          <div class="ckpi"><span class="ckpi-label">Lead dự kiến</span><span class="ckpi-val">~60–70 Leads</span></div>
+          <div class="ckpi"><span class="ckpi-label">KOC</span><span class="ckpi-val">3–5 micro KOC</span></div>
         </div>
       </div>
 
       <div class="channel-card">
-        <div class="channel-icon">🎙️</div>
-        <div class="channel-name">KOL / KOC</div>
-        <div class="channel-budget">10.000.000 đ (Gross)</div>
-        <div class="channel-goal">Ưu tiên KOC micro (5–50k followers) chuyên nội dung học tập, du học, phát triển bản thân. Nội dung dạng review thật, trải nghiệm thật.</div>
+        <div class="channel-icon">🎯</div>
+        <div class="channel-name">Landing Page + Retargeting</div>
+        <div class="channel-budget">Nằm trong hệ thống tracking</div>
+        <div class="channel-goal">Landing Page chuyên dụng hứng toàn bộ traffic từ Ads và KOC. Retargeting người đã vào LP nhưng chưa điền form — đẩy ưu đãi giới hạn.</div>
         <div class="channel-kpi">
-          <div class="ckpi">
-            <span class="ckpi-label">Số lượng KOC</span>
-            <span class="ckpi-val">3–5 KOC</span>
-          </div>
-          <div class="ckpi">
-            <span class="ckpi-label">Platform</span>
-            <span class="ckpi-val">TikTok + FB</span>
-          </div>
-          <div class="ckpi">
-            <span class="ckpi-label">Nội dung</span>
-            <span class="ckpi-val">Review · Trải nghiệm</span>
-          </div>
+          <div class="ckpi"><span class="ckpi-label">CR Landing Page</span><span class="ckpi-val">≥ 3%</span></div>
+          <div class="ckpi"><span class="ckpi-label">Tốc độ tải</span><span class="ckpi-val">&lt; 2 giây</span></div>
+          <div class="ckpi"><span class="ckpi-label">A/B Test</span><span class="ckpi-val">Headline + Form</span></div>
         </div>
       </div>
     </div>
 
-    <!-- Landing Page -->
-    <div style="margin-top:16px;background:var(--surface);padding:40px;border-radius:12px;border:1px solid var(--border);border-top:3px solid var(--accent2);box-shadow:0 2px 16px rgba(37,99,235,0.08);">
+    <div style="margin-top:16px;background:var(--surface);padding:40px;border-radius:12px;border:1px solid var(--border);border-top:3px solid var(--accent2);box-shadow:var(--shadow);">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
         <div>
           <div style="font-family:var(--display);font-size:10px;color:var(--accent2);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Infrastructure</div>
-          <h3 style="font-family:var(--display);font-size:24px;font-weight:800;margin-bottom:12px;">Landing Page chuyên dụng + Tracking Setup</h3>
-          <p style="color:var(--text2);font-size:14px;line-height:1.7;">Đây là yếu tố quyết định CPL. Một landing page được tối ưu CRO tốt có thể giảm 20–30% chi phí trên mỗi Lead so với dùng trang web thông thường. Kết hợp với tracking đầy đủ, chúng tôi biết chính xác kênh nào, creative nào đang sinh ra Lead chất lượng nhất.</p>
+          <h3 style="font-family:var(--display);font-size:24px;font-weight:800;margin-bottom:12px;">Full Tracking Stack</h3>
+          <p style="color:var(--text2);font-size:14px;line-height:1.7;">Hệ thống tracking full-stack (GA4 + GTM + CAPI) giúp định lượng chính xác hành trình khách hàng. Mọi quyết định phân bổ ngân sách đều dựa trên dữ liệu chuyển đổi thực tế từng kênh.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px;">
-          <div class="ckpi" style="padding:12px 0;">
-            <span class="ckpi-label">Facebook Pixel + CAPI</span>
-            <span class="ckpi-val">✓ Included</span>
-          </div>
-          <div class="ckpi" style="padding:12px 0;">
-            <span class="ckpi-label">Google Analytics 4</span>
-            <span class="ckpi-val">✓ Included</span>
-          </div>
-          <div class="ckpi" style="padding:12px 0;">
-            <span class="ckpi-label">TikTok Pixel</span>
-            <span class="ckpi-val">✓ Included</span>
-          </div>
-          <div class="ckpi" style="padding:12px 0;">
-            <span class="ckpi-label">Dashboard Báo cáo</span>
-            <span class="ckpi-val">✓ Included</span>
-          </div>
-          <div class="ckpi" style="padding:12px 0;">
-            <span class="ckpi-label">A/B Test Landing Page</span>
-            <span class="ckpi-val">✓ Included</span>
-          </div>
+          <div class="ckpi" style="padding:12px 0;"><span class="ckpi-label">Facebook Pixel + CAPI</span><span class="ckpi-val">✓ Included</span></div>
+          <div class="ckpi" style="padding:12px 0;"><span class="ckpi-label">Google Analytics 4</span><span class="ckpi-val">✓ Included</span></div>
+          <div class="ckpi" style="padding:12px 0;"><span class="ckpi-label">TikTok Pixel</span><span class="ckpi-val">✓ Included</span></div>
+          <div class="ckpi" style="padding:12px 0;"><span class="ckpi-label">Dashboard Báo cáo</span><span class="ckpi-val">✓ Included</span></div>
+          <div class="ckpi" style="padding:12px 0;"><span class="ckpi-label">A/B Test Landing Page</span><span class="ckpi-val">✓ Included</span></div>
         </div>
       </div>
     </div>
@@ -2088,51 +3429,39 @@
 
   <!-- Timeline -->
   <div class="prop-section">
-    <div class="section-label">// Timeline 45 ngày</div>
-    <h2>Kế hoạch triển khai</h2>
+    <div class="section-label">// Kế hoạch triển khai theo giai đoạn</div>
+    <h2>Action Plan 45 ngày</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="tl-week">
-          <div class="tl-week-num">1</div>
-          <div class="tl-week-label">Tuần</div>
-        </div>
+        <div class="tl-week"><div class="tl-week-num">1</div><div class="tl-week-label">Tuần</div></div>
         <div class="tl-content">
-          <div class="tl-phase">Phase 01 · Setup</div>
-          <h4>Xây nền tảng</h4>
-          <p>Cài đặt toàn bộ tracking (Pixel, CAPI, GA4, TikTok Pixel). Thiết kế & phát triển Landing Page chuyên dụng. Xây dựng audience research, creative brief. Setup tài khoản quảng cáo, cấu trúc campaign.</p>
+          <div class="tl-phase">Phase 01 · Setup &amp; Build — "Xây nền móng"</div>
+          <h4>Thiết kế Landing Page + Cài đặt Tracking</h4>
+          <p>Thiết kế Landing Page chuyên dụng cho chiến dịch "24 Buổi Thực Chiến". Cài đặt toàn bộ hệ thống Tracking (Facebook Pixel, TikTok Pixel, GA4, Conversion API). Brief cho 3–5 Micro-KOC sản xuất video. Sản xuất Media: Banner, Video Ads ngắn.</p>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="tl-week">
-          <div class="tl-week-num">2</div>
-          <div class="tl-week-label">Tuần</div>
-        </div>
+        <div class="tl-week"><div class="tl-week-num">2</div><div class="tl-week-label">Tuần</div></div>
         <div class="tl-content">
-          <div class="tl-phase">Phase 02 · Launch</div>
-          <h4>Khởi chạy & thu dữ liệu</h4>
-          <p>Chạy Facebook Ads + TikTok Ads đồng thời. Test 3–4 creative format khác nhau. Theo dõi CPL ngày và điều chỉnh bid. Activate KOC campaign. Thu thập 50–80 Lead đầu tiên để calibrate.</p>
+          <div class="tl-phase">Phase 02 · Launch — "Phủ sóng &amp; Thu dữ liệu"</div>
+          <h4>Khởi chạy đồng loạt + Thu 50–80 Leads đầu tiên</h4>
+          <p>Lên camp Facebook Ads (nhắm target dân văn phòng) và TikTok Ads (nhắm sinh viên) đồng loạt. Các KOC đăng tải video và gắn link. Chạy A/B Testing 3–4 mẫu Creative. Mục tiêu: thu 50–80 Leads để machine learning nhận diện đúng tệp.</p>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="tl-week">
-          <div class="tl-week-num">3–4</div>
-          <div class="tl-week-label">Tuần</div>
-        </div>
+        <div class="tl-week"><div class="tl-week-num">3–4</div><div class="tl-week-label">Tuần</div></div>
         <div class="tl-content">
-          <div class="tl-phase">Phase 03 · Optimize</div>
-          <h4>Tối ưu & scale</h4>
-          <p>Tắt creative kém hiệu quả, scale budget vào nhóm sinh lời. A/B test landing page (headline, CTA, form). Tối ưu audience dựa trên data Lead chất lượng. Retargeting visitor chưa điền form.</p>
+          <div class="tl-phase">Phase 03 · Optimize &amp; Scale — "Tối ưu &amp; Tăng tốc"</div>
+          <h4>Scale ngân sách vào camp sinh lời + Retargeting</h4>
+          <p>Đọc Data thời gian thực, tắt camp kém hiệu quả, dồn ngân sách vào camp đang sinh lời. Kích hoạt Retargeting những người đã xem video Ads trên 50% hoặc đã vào Landing Page nhưng chưa để lại thông tin. Sales phản hồi chất lượng Lead để tối ưu Audience.</p>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="tl-week">
-          <div class="tl-week-num">5–6</div>
-          <div class="tl-week-label">Tuần</div>
-        </div>
+        <div class="tl-week"><div class="tl-week-num">5–6</div><div class="tl-week-label">Tuần</div></div>
         <div class="tl-content">
-          <div class="tl-phase">Phase 04 · Harvest</div>
-          <h4>Thu hoạch & tổng kết</h4>
-          <p>Đẩy mạnh kênh hiệu quả nhất. Remarketing danh sách Lead cũ chưa chốt. Tổng kết KPI, phân tích insight từng kênh. Báo cáo đầy đủ và đề xuất kế hoạch tháng tiếp theo.</p>
+          <div class="tl-phase">Phase 04 · Harvest — "Thu hoạch &amp; Chốt Sale"</div>
+          <h4>FOMO + Remarketing Lead cũ + Tổng kết KPI</h4>
+          <p>Đẩy mạnh nội dung cấp bách: "Chỉ còn 3 ngày đóng đăng ký lớp Zoom tháng này", "Ưu đãi 20 suất cuối". Retargeting chéo Lead cũ chưa chốt với testimonial học viên thành công. Tổng kết KPI 300+ Leads và xuất báo cáo kết quả.</p>
         </div>
       </div>
     </div>
@@ -2190,7 +3519,7 @@
         </tr>
       </tbody>
     </table>
-    <p style="font-size:12px;color:var(--text2);margin-top:16px;font-family:var(--display);color:var(--text3);">* Các con số trên là ước tính dựa trên benchmark ngành và lịch sử của SOT. Kết quả thực tế phụ thuộc vào chất lượng creative và tốc độ phản hồi Lead của đội sales.</p>
+    <p style="font-size:12px;color:var(--text3);margin-top:16px;font-family:var(--display);">* Các con số trên là ước tính dựa trên benchmark ngành và lịch sử của SOT. Kết quả thực tế phụ thuộc vào chất lượng creative và tốc độ phản hồi Lead của đội sales.</p>
   </div>
 
   <!-- Why us -->
@@ -2198,21 +3527,21 @@
     <div class="section-label">// Tại sao chọn Số Hóa</div>
     <h2>Tại sao Proposal này sẽ hoạt động?</h2>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
-      <div style="background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);box-shadow:0 2px 16px rgba(37,99,235,0.08);border-left:4px solid var(--accent);">
-        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px;">Chúng tôi không đoán — chúng tôi đo.</h3>
-        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Mọi quyết định đều dựa trên dữ liệu thực. Tracking đầy đủ từ ngày đầu tiên. Bạn thấy rõ từng đồng tiền đang hoạt động như thế nào.</p>
+      <div style="background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);box-shadow:var(--shadow);border-left:4px solid var(--accent);">
+        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px;">Cơ cấu chi phí gắn liền với hiệu suất</h3>
+        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Mô hình tính phí dựa trên % ngân sách đi kèm các điều kiện KPI chặt chẽ (tỷ lệ chốt, CPL) giúp lợi ích của Số Hóa đồng hành trực tiếp với bài toán lợi nhuận của SOT. Ngân sách chỉ được đề xuất mở rộng khi hiệu quả đã được chứng minh qua số liệu thực tế.</p>
       </div>
-      <div style="background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);box-shadow:0 2px 16px rgba(37,99,235,0.08);border-left:4px solid var(--accent2);">
-        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px;">Landing page là vũ khí số 1.</h3>
-        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Nhiều agency bỏ qua bước này. Chúng tôi xây riêng, tối ưu liên tục. Đây là lý do CPL giảm được 20–30% so với dùng website thông thường.</p>
+      <div style="background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);box-shadow:var(--shadow);border-left:4px solid var(--accent2);">
+        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px;">Năng lực cốt lõi về tối ưu chuyển đổi (CRO)</h3>
+        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Chúng tôi thiết kế và liên tục A/B test các Landing Page chuyên biệt nhằm tối ưu hóa phễu thu thập dữ liệu. Đây là phương pháp giúp ép giá CPL xuống mức thấp nhất trong khi đảm bảo chất lượng đầu vào của Lead.</p>
       </div>
-      <div style="background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);box-shadow:0 2px 16px rgba(37,99,235,0.08);border-left:4px solid #a855f7;">
-        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px;">Multi-channel — nhưng có chủ đích.</h3>
-        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Không chạy TikTok chỉ để "có mặt ở đó". Mỗi kênh có mục tiêu, audience, và creative riêng. Phân bổ ngân sách linh hoạt theo performance thực tế.</p>
+      <div style="background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);box-shadow:var(--shadow);border-left:4px solid #a855f7;">
+        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px;">Hệ thống đo lường đa điểm chạm</h3>
+        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Triển khai hệ thống tracking full-stack (GA4, Meta Pixel, CAPI, TikTok Pixel) giúp định lượng chính xác hành trình khách hàng. Mọi quyết định tối ưu và phân bổ ngân sách đều dựa trên dữ liệu chuyển đổi thực tế từng kênh.</p>
       </div>
-      <div style="background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);box-shadow:0 2px 16px rgba(37,99,235,0.08);border-left:4px solid #22c55e;">
-        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px;">Báo cáo thật — không tô hồng.</h3>
-        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Mỗi tuần một báo cáo rõ ràng: số liệu thực, phân tích thực, đề xuất thực. Nếu có vấn đề, chúng tôi nói thẳng và điều chỉnh ngay.</p>
+      <div style="background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);box-shadow:var(--shadow);border-left:4px solid #22c55e;">
+        <h3 style="font-family:var(--display);font-size:18px;font-weight:700;margin-bottom:12px;">Báo cáo minh bạch, tập trung vào chỉ số cốt lõi</h3>
+        <p style="color:var(--text2);font-size:14px;line-height:1.7;">Quy trình báo cáo hàng tuần được chuẩn hóa, tập trung tuyệt đối vào các chỉ số kinh doanh mang tính quyết định như CPL, tỷ lệ Qualify Lead và ROAS. Minh bạch giúp doanh nghiệp nắm bắt chính xác dòng chảy ngân sách.</p>
       </div>
     </div>
   </div>
@@ -2237,9 +3566,30 @@
   function showPage(page) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById('page-' + page).classList.add('active');
-    document.getElementById('nav-' + page).classList.add('active');
+    
+    const pageEl = document.getElementById('page-' + page);
+    if (pageEl) pageEl.classList.add('active');
+    
+    // Only highlight nav for main pages
+    const navEl = document.getElementById('nav-' + page);
+    if (navEl) navEl.classList.add('active');
+    
+    // For sub-pages, highlight the parent nav
+    const servicePages = ['launch-fast','performance-core','scale-optimize','landing-page','tracking-setup','dashboard','audit'];
+    if (servicePages.includes(page)) {
+      document.getElementById('nav-services').classList.add('active');
+    }
+    
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showServiceDetail(service) {
+    showPage(service);
+  }
+
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    item.classList.toggle('open');
   }
 </script>
 </body>
